@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+
+        <fileDesc>
+            <!--fileDesc is the first major component of the teiHeader-->
+            <titleStmt>
+                <!--first element of fileDesc element-->
+                <title>Xenophon's Symposium. Towards a Scholarly Digital Edition</title>
+                <author xml:id="Xe" sameAs="https://isni.org/isni/0000000123212506"
+                    >Xenophon</author>
+                <editor>
+                    <persName ref="#DC">Diego Canali</persName>
+                </editor>
+                <principal>
+                    <persName ref="#DC">Diego Canali</persName>
+                </principal>
+                <funder xml:id="UniBo" sameAs="https://isni.org/isni/0000000121912795">Alma Mater
+                    Studiorum - Università di Bologna</funder>
+                <sponsor xml:id="UoC" sameAs="https://isni.org/isni/0000000405763437">University of
+                    Crete</sponsor>
+                <sponsor xml:id="TP">TALOS - AI4SSH</sponsor>
+                <respStmt>
+                    <resp>Encoding</resp>
+                    <persName xml:id="DC">Diego Canali</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Supervision</resp>
+                    <persName xml:id="FT" sameAs="https://isni.org/isni/000000037333862X">Tomasi,
+                        Francesca;</persName>
+                    <persName xml:id="CN" sameAs="https://isni.org/isni/0000000033247107">Neri,
+                        Camillo;</persName>
+                    <persName xml:id="CR" sameAs="https://isni.org/isni/0000000370933810">Roche,
+                        Christophe;</persName>
+                    <persName xml:id="MT" sameAs="https://isni.org/isni/0000000117045553">Tamiolaki,
+                        Melina;</persName>
+                    <persName xml:id="MP" sameAs="https://isni.org/isni/0000000044512535"
+                        >Papadopoulou, Maria.</persName>
+
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <!--second element of fileDesc element-->
+                <!--It contains either phrases or more specialized elements identifying the edition and those responsible for it-->
+                <edition><!-- describes the particularities of one edition of a text.--></edition>
+                <editor/>
+            </editionStmt>
+
+            <publicationStmt>
+                <!--fourth element of fileDesc element-->
+                <publisher>Alma Mater Studiorum - University of Bologna</publisher>
+                <pubPlace>Università di Bologna</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <p>This edition will be available for research purpose only</p>
+                </availability>
+            </publicationStmt>
+
+
+            <!--seriesStmt is the fifth element of the fileDesc element, but I won't use it here-->
+
+            <notesStmt>
+                <!--sixth and optional element of the fileDesc element-->
+                <note>
+                    <!--collects together any notes providing information about a text additional to that recorded in other parts of the bibliographic description-->
+                </note>
+            </notesStmt>
+
+            <sourceDesc>
+                <!--seventh, final and mendatory component of the fileDesc element-->
+                <!--This edition is "born-digital", but it derives from a comparison and a
+                        <emph>collatio</emph> of the phisical printed editions described
+                    below.-->
+                <listBibl xml:id="Monographies">
+                    <head>Editions</head>
+                    <bibl xml:id="XenSympMarchant">
+                        <title type="title_1" xml:lang="lat">CONVIVIUM</title>
+                        <title type="title_2" xml:lang="gre" xml:id="Symp">ΣΥΜΠΟΣΙΟΝ</title>
+                        <author ref="#Xe">Xenophon</author>
+                        <editor xml:id="MEC" sameAs="https://isni.org/isni/0000000120287772"
+                            >Marchant, E.C.</editor>
+                        <publisher>Claredon Press</publisher>
+                        <pubPlace>Oxford</pubPlace>
+                        <date>1921 (repr. 1971)</date>
+                        <note>in E.C. Marchant, Xenophontis opera omnia, vol. 2, 2nd edn., Oxford:
+                            Clarendon Press, 1921 (repr. 1971) </note>
+                    </bibl>
+                    <bibl xml:id="XenSympOllier">
+                        <title type="title_1" xml:lang="fr">Xénophon</title>
+                        <title type="title_2" xml:lang="fr">Banquet - Apologie de Socrate</title>
+                        <author ref="#Xe">Xenophon</author>
+                        <editor xml:id="OF" sameAs="https://isni.org/isni/0000000108779299">Ollier,
+                            François</editor>
+                        <publisher>Société d'édition "Les Belles Lettres"</publisher>
+                        <pubPlace>Paris</pubPlace>
+                        <date>1961</date>
+                    </bibl>
+                    <bibl xml:id="XenSympCirignano">
+                        <title>Xenophon's "Symposium": A collation, text and text history</title>
+                        <author ref="#Xe">Xenophon</author>
+                        <editor xml:id="CJS" sameAs="https://isni.org/isni/0000000434940076"
+                            >Cirignano, John Stephen</editor>
+                        <publisher>Graduate College of The University of Iowa</publisher>
+                        <pubPlace>The University of Iowa</pubPlace>
+                        <date>1993, May</date>
+                        <note>This is not a published edition, but Cirignano's Ph.D. thesis</note>
+                        <note>It's relevant to state that Cirignano's critical apparatus may seem
+                            poor. It is, indeed, but only because a detailed report of the variants
+                            from the direct tradition of the manuscripts is fully recorded in
+                            chapter V ("Collation of Manuscripts") of his dissertation. Here he
+                            reports more in detail the readings found in the different manuscripts,
+                            while in the base text he inserts those who he has chosen, and in the
+                            apparatus he reports only the more relevant readings. In any case, when
+                            I refer to him through @resp attribute for a reading or a lem, if it is
+                            not found in the critical apparatus of his edition, it is foundable in
+                            chapter V of his dissertation.</note>
+                    </bibl>
+                    <bibl xml:id="XenSympJackson">
+                        <title>The Symposium of Xenophon of Athens. A New Critical Edition with a
+                            Facing-Page English Translation</title>
+                        <author ref="#Xe">Xenophon</author>
+                        <editor xml:id="JDF" sameAs="https://isni.org/isni/000000011674343X"
+                            >Jackson, Donald F.</editor>
+                        <publisher>The Edwin Mellen Press</publisher>
+                        <pubPlace>Lewinston, Queenston, Lampeter</pubPlace>
+                        <date>2013</date>
+                    </bibl>
+                    <bibl xml:id="HussXenSympKomm">
+                        <title>Xenophons Symposion. Ein Kommentar</title>
+                        <author xml:id="Huss" sameAs="http://viaf.org/viaf/37192073">Huss,
+                            Bernard</author>
+                    </bibl>
+                    <bibl xml:id="XenSympGiovanelli">
+                        <title>Senofonte. Simposio</title>
+                        <author ref="#Xe">Xenophon</author>
+                        <editor xml:id="AG">Giovanelli, Anna</editor>
+                        <publisher>La Vita Felice</publisher>
+                        <pubPlace>Milano</pubPlace>
+                        <date>2003 (fifth edition 2012)</date>
+                    </bibl>
+                    <bibl xml:id="DindXenScripMin">
+                        <title>Xenophontis Scripta Minora</title>
+                        <author xml:id="Dindorf" sameAs="http://viaf.org/viaf/4973853">Dindorf,
+                            Wilhelm</author>
+                        <publisher>Teubner</publisher>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date>1824</date>
+                    </bibl>
+                    <bibl xml:id="NabXenScripMin">
+                        <title>Xenophontis Scripta Minora</title>
+                        <author xml:id="Naber" sameAs="http://viaf.org/viaf/67246036">Naber, Samuel
+                            Adrianus</author>
+                        <publisher>Teubner</publisher>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date>1885</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="RichXenSymp">
+                        <title>Xenophontis Symposion</title>
+                        <author xml:id="Richards" sameAs="http://viaf.org/viaf/48837021">Richards,
+                            Herbert</author>
+                        <publisher>Macmillan</publisher>
+                        <pubPlace>London</pubPlace>
+                        <date>1881</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="MehlXenScripMin">
+                        <title>Xenophontis Scripta Minora</title>
+                        <author xml:id="Mehler" sameAs="http://viaf.org/viaf/778411">Mehler,
+                            Eugene</author>
+                        <publisher>Teubner</publisher>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date>1873</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="StephXenScripExt">
+                        <title>Xenophontis Scripta quae extant omnia</title>
+                        <author xml:id="Stephanus" sameAs="http://viaf.org/viaf/79024744">Stephanus,
+                            Henricus</author>
+                        <pubPlace>Geneva</pubPlace>
+                        <date>1824</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="KrugXenOpOm">
+                        <title>Xenophontis Opera Omnia</title>
+                        <author xml:id="Krüger" sameAs="http://viaf.org/viaf/32152856">Krüger, Karl
+                            Wilhelm</author>
+                        <publisher>Teubner</publisher>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date>1830-1835</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="CobObsCrit">
+                        <title>Observationes criticae in Platonis comici et Xenophontis reliquias</title>
+                        <author xml:id="Cobet" sameAs="http://viaf.org/viaf/69276004">Cobet, Carel
+                            Gabriel</author>
+                        <publisher>Brill</publisher>
+                        <pubPlace>Leiden</pubPlace>
+                        <date>1849</date>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="KassAusPCG">
+                        <title>Poetae Comici Graeci (PCG)</title>
+                        <author xml:id="Kassel" sameAs="http://viaf.org/viaf/93615174">Kassel,
+                            Rudolf</author>
+                        <author xml:id="Austin" sameAs="http://viaf.org/viaf/54161811">Austin,
+                            Colin</author>
+                        <publisher>de Gruyter</publisher>
+                        <pubPlace>Berlin, New York</pubPlace>
+                        <date>1983-2001</date>
+                        <note>PGC = Kassel R.-Austin C. - Poetae Comici Graeci, III vols.,
+                            Berlin-New York 1991.</note>
+                    </bibl>
+                </listBibl>
+               
+                <listBibl xml:id="articlesInJournal">
+                    <head>Articles</head>
+                    <!--I insert from here on a list of the scientific articles consulted to edit the critical text.
+                        I have to finish implementing metadata about bibliographical entries (names of the journals, pubplaces, publisher, date...-->
+                    <bibl xml:id="PetragliaIndTrad">
+                        <title>PER LA TRADIZIONE INDIRETTA DEL SIM POSIO DI SENOFONTE</title>
+                        <author xml:id="Petraglia">Petraglia, Manuela</author>
+                    </bibl>
+                    <bibl xml:id="CooperBetterSolution">
+                        <title>A better solution for the text of Xenophon, Symp. 4.37</title>
+                        <author xml:id="Cooper">Cooper, Guy L.</author>
+                    </bibl>                    
+                    <bibl xml:id="HussObsCrit">
+                        <title>In Xenophontis "Symposium" Observatiunculae Criticae</title>
+                        <author ref="#Huss">Huss, Bernard</author>
+                    </bibl>
+                </listBibl>
+                <listBibl xml:id="articlesInBooks">
+                    <bibl>
+                        <title></title>
+                        <author></author>
+                        <publisher></publisher>
+                        <pubPlace></pubPlace>
+                        <date></date>
+                        <note></note>
+                    </bibl>
+                </listBibl>
+
+                <!--Here I will insert a list of <bibl> entries to record the INDIRECT TRADITION, treating the witnesses as books, but reporting only AUTHOR and TITLE-->
+
+                <!--NB: MEGLIO TRATTARE LA TRADIZIONE INDIRETTA COME WIT, E NON COME BIBL [20-05-2024]-->
+
+                <listBibl xml:id="IndiTrad">
+                    <head>Indirect Tradition</head>
+                    <bibl xml:id="ArisArsRhet"
+                        source="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0284:056:0">
+                        <title xml:id="ArsRhet"
+                            sameAs="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0284:056:0"
+                            >Ars Rhetorica</title>
+                        <author xml:id="Aristides" sameAs="http://viaf.org/viaf/89043754">Aristides,
+                            Aelius</author>
+                        <note>L. Spengel, Rhetores Graeci, vol. 2, Leipzig: Teubner, 1854 (repr.
+                            Frankfurt am Main: Minerva, 1966): 459-554.</note>
+                    </bibl>
+                    <bibl xml:id="AthenDeipnosoph"
+                        source="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0008:001:0">
+                        <title xml:id="Deipnosoph"
+                            sameAs="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0008:001:0"
+                            >ΑΘΗΝΑΙΟΥ ΝΑΥΚΡΑΤΙΤΟΥ ΔΕΙΠΝΟΣΟΦΙΣΤΩΝ</title>
+                        <author xml:id="Athenaeus" sameAs="http://viaf.org/viaf/100169636"
+                            >Athenaeus, of Naucratis</author>
+                        <note>G. Kaibel, Athenaei Naucratitae deipnosophistarum libri xv, 3 vols.,
+                            Leipzig: Teubner.</note>
+                    </bibl>
+                    <bibl xml:id="PlotDePulchr"
+                        source="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?2000:001:83063">
+                        <title xml:id="DePulchr"
+                            sameAs="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?2000:001:0"
+                            >Enneades (De Pulchritudine)</title>
+                        <author xml:id="Plotinus" sameAs="http://viaf.org/viaf/108386765"
+                            >Plotinus</author>
+                        <note>P. Henry and H.-R. Schwyzer, Plotini opera, 3 vols. [Museum Lessianum.
+                            Series philosophica 33-35. Leiden: Brill.</note>
+                    </bibl>
+                    <bibl xml:id="AlexisPann">
+                        <title xml:id="Pannuchis">Pannuchis</title>
+                        <author xml:id="Alexis" sameAs="http://viaf.org/viaf/36160903">Alexis</author>
+                        <note>T. Kock, Comicorum Atticorum fragmenta, vol. 2, Leipzig: Teubner, 1884: 297-329, 331-408. 
+                        (fr. 174 Kock = fr. 179 K.-A.)
+                        link: <ref target="http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0402:001:35902">http://stephanus.tlg.uci.edu.ezproxy.unibo.it/Iris/Cite?0402:001:35902</ref></note>
+                    </bibl>
+                    <!--we need to verify if the value of sameAs refered to the three works, in the <note> elements, are properly URIs or URLs!-->
+                </listBibl>
+
+                <!--Here I am going to insert a listBibl for the scholars who proposed conjectures in specific passages of the text, listing name and work-->
+                <listBibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Dindorf" sameAs="http://viaf.org/viaf/4973853">Dindorf,
+                            Ludwig August</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Naber" sameAs="http://viaf.org/viaf/67246036">Naber, Samuel
+                            Adrianus</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Richards" sameAs="http://viaf.org/viaf/48837021">Richards,
+                            Herbert</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Mehler" sameAs="http://viaf.org/viaf/778411">Mehler,
+                            Eugene</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Stephanus" sameAs="http://viaf.org/viaf/79024744">Stephanus,
+                            Henricus</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Krüger" sameAs="http://viaf.org/viaf/32152856">Krüger, Karl
+                            Wilhelm</author>
+                        <note/>
+                    </bibl>
+                    <bibl>
+                        <title/>
+                        <author xml:id="Cobet" sameAs="http://viaf.org/viaf/69276004">Cobet, Carel
+                            Gabriel</author>
+                        <note/>
+                    </bibl>
+                    <bibl xml:id="K-A">
+                        <title>Poetae Comici Graeci (PCG)</title>
+                        <author xml:id="Kassel" sameAs="http://viaf.org/viaf/93615174">Kassel,
+                            Rudolf</author>
+                        <author xml:id="Austin" sameAs="http://viaf.org/viaf/54161811">Austin,
+                            Colin</author>
+                        <note>PGC = Kassel R.-Austin C. - Poetae Comici Graeci, III vols.,
+                            Berlin-New York 1991.</note>
+                    </bibl>
+                </listBibl>
+
+                <listBibl xml:id="articles">
+                    <head>Articles</head>
+                    <!--I insert from here on a list of the scientific articles consulted to edit the critical text. 
+                        I have to finish implementing metadata about bibliographical entries (names of the journals, pubplaces, publisher, date...-->
+                    <bibl xml:id="PetragliaIndTrad">
+                        <title>PER LA TRADIZIONE INDIRETTA DEL SIM POSIO DI SENOFONTE</title>
+                        <author xml:id="Petraglia">Petraglia, Manuela</author>
+                    </bibl>
+                    <bibl xml:id="CooperBetterSolution">
+                        <title>A better solution for the text of Xenophon, Symp. 4.37</title>
+                        <author xml:id="Cooper">Cooper, Guy L.</author>
+                    </bibl>
+                    <bibl xml:id="HussXenSympKomm">
+                        <title>Xenophons Symposion. Ein Kommentar</title>
+                        <author xml:id="Huss" sameAs="http://viaf.org/viaf/37192073">Huss,
+                            Bernard</author>
+                    </bibl>
+                    <bibl xml:id="HussObsCrit">
+                        <title>In Xenophontis "Symposium" Observatiunculae Criticae</title>
+                        <author ref="#Huss">Huss, Bernard</author>
+                    </bibl>
+                </listBibl>
+
+
+
+
+
+
+                <!-- I put here a list of all the manuscripts, nested in a way so that it is clear the representation of the families of manuscripts as 
+                    it is represented in Huss' stemma codicum.
+                For clarity reasons, I provide here the link to the Pinakes page listing all Xenophon's Symposium's manuscripts: 
+                                <ptr target="https://pinakes.irht.cnrs.fr/notices/oeuvre/12687/"/>.
+                When available, I noted that a Digitalization is available; where this is not specified, I just provided the link to the Pinakes description of the manuscript.
+                When no digitalization nor description was available for a manuscript, I noted nothing.-->
+                <listWit>
+                    <head>Conspectus Siglorum</head>
+                    <!--Consensus Codicum (all codices' list):
+                    #VatUrbGr95 #g #F #D #r #Z #Q #Mut129 #Mon494 #q #R #H2 #E #A #Ha #X #B #H1 #G #V #L #O #N #P #C #K-->
+                    <witness xml:id="Phi">Lost Archetype<listWit>
+                        <!--sostituire anche qui gli id in greco con il nome intero in caratteri latini-->
+
+                            <witness xml:id="alpha">Lost Subarchetype<listWit>
+
+                                <witness xml:id="VatUrbGr95">
+                                        <!--Sostituire in qs id i punti con dei trattini bassi, sia qui che in tutti i pointer nel corso della marcatura-->Vaticanus Urbinas gr. 95,saec.
+                                        XIV, The manuscript contains a complete text of Symp. on ff.
+                                        31r-48v, and also two extracts on ff. 71v-72r: (a) και ό
+                                        Σωκράτης ειπεν (2,9) — έδοξεν είρήσθαι (2,11); (b) διψώ
+                                        (2,23) — εγειρειν (3,2) [Cirignano = "V"]. See further at <!--digitalization available-->
+                                        <ptr target="https://digi.vatlib.it/view/MSS_Urb.gr.95.pt.1"/>
+                                        <!--Here I inserted a link to the digital facsimile of the code, freely available to browse at the website of Vatican Library-->
+                                        <listWit>
+                                            <witness xml:id="g"> Monacensis 495, saec. XV, The
+                                                manuscript contains the same fragments of Symp.
+                                                Contained by Vat. Urb. Gr.95.</witness>
+                                        </listWit>
+                                    </witness>
+
+                                    <witness xml:id="beta">Lost Manuscript <listWit>
+
+                                            <witness xml:id="delta">Lost Manuscript <listWit>
+                                                  <witness xml:id="F"> Vindobonensis phil. gr. 109,
+                                                  saec. XIV, ff. 219r-229v. <!--Digitalization available-->
+                                                  <ptr
+                                                  target="https://digital.onb.ac.at/RepViewer/viewer.faces?doc=DTL_3104684&amp;order=1&amp;view=SINGLE"/>
+                                                  <!--Note that in this string above, &amp; must be substituted when searching in a browser, since xml doesn't allow 
+                                                       to write & alone, so I had to substitute here in the code with its entity translation "&amp;"--></witness>
+                                                  <witness xml:id="D"> Laurentianus 85,9, saec. XV,
+                                                  The text of this manuscript probably was the
+                                                  editio princeps' base, ff. 429v-434v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/1020001"/><listWit>
+                                                  <witness xml:id="r"> Bernensis 690, saec. XVI, The
+                                                  manuscript contains an extract of Symp. 8,12-39 on
+                                                  ff. 58v-60v.</witness>
+                                                  </listWit>
+                                                  </witness>
+                                                </listWit>
+                                            </witness>
+
+                                            <witness xml:id="zeta">Lost Manuscript <listWit>
+
+                                                  <witness xml:id="Z"> Laurentianus 55-19, saec. XV,
+                                                  ff. 1r-20v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/852421"/>
+                                                  <listWit>
+
+                                                  <witness xml:id="Q"> Ambrosianus A 157sup., saec.
+                                                  XV, written by George Chrysococches, ff. 91r-104v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://digitallibrary.unicatt.it/veneranda/0b02da8280193b37"/><listWit>
+
+                                                  <witness xml:id="Mut129"> Mutinensis Estensis gr.
+                                                  129 (α.W.9.11, olim III D 10), saec. XV, ff.
+                                                  1r-26v. <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/43547/"/><listWit>
+
+                                                  <witness xml:id="Mon494"> Monacensis 494, saec.
+                                                  XV, Symp. 1,1-2,26 πυκνα, ff. 1r-4v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://daten.digitale-sammlungen.de/~db/0010/bsb00109229/images/index.html"
+                                                  /></witness>
+                                                  </listWit>
+                                                  </witness>
+                                                  <witness xml:id="q"> Laurentianus Acquisti e Doni
+                                                  37, saec. XVI, The manuscript contains different
+                                                  extracts of Symp. on ff. 22r-28r.</witness>
+
+                                                  </listWit>
+                                                  </witness>
+                                                  </listWit>
+                                                  </witness>
+                                                  <witness xml:id="R"> Ambrosianus E 119sup., saec.
+                                                  XV, Symp. until 8,36 φιληθεντι on ff. 25r-37r
+                                                  (written by altera manu on ff. 21r e 22v). <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/42729/"
+                                                  /></witness>
+                                                  <witness xml:id="H2"> Vindobonensis phil. gr. 37,
+                                                  saec. XVI, ff. 148v-163r (The same manuscript
+                                                  contains, written by altera manu, also
+                                                  H1).</witness>
+                                                </listWit>
+                                            </witness>
+                                        </listWit>
+                                    </witness>
+                                </listWit>
+                            </witness>
+
+                            <witness xml:id="ε">Lost Subarchetype <listWit>
+
+                                    <witness xml:id="λ">Lost Manuscript <listWit>
+
+                                            <witness xml:id="E"> Laurentianus 80,13, saec. XIV in.,
+                                                ff. 132r-144r. <!--digitalization available-->
+                                                <ptr
+                                                  target="https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/1047840"/><listWit>
+
+                                                  <witness xml:id="A"> Parisinus 1643, saec. XV, ff.
+                                                  151v-170r. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://gallica.bnf.fr/ark:/12148/btv1b107221114"
+                                                  /></witness>
+                                                  <witness xml:id="Ha"> Britanicus addit. 5110,
+                                                  saec. XV, ff. 152r-159v [Cirignano =
+                                                  "b"]</witness>
+                                                  <witness xml:id="X"> Leidensis e legato Vulcanii
+                                                  2, saec. XV, written by George Hermionimus from
+                                                  Sparta, ff. 73r-83v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://digitalcollections.universiteitleiden.nl/view/item/3488172"/><listWit>
+
+                                                  <witness xml:id="B"> Parisinus 1645, saec. XV,
+                                                  written by George Hermionimus from Sparta, ff.
+                                                  1r-33r. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://gallica.bnf.fr/ark:/12148/btv1b107228913"
+                                                  /></witness>
+                                                  </listWit>
+                                                  </witness>
+                                                  <witness xml:id="H1"> Vindobonensis phil. gr. 37,
+                                                  saec. XVI, ff. 112v-124v (The same manuscript
+                                                  contains, written by altera manu, also H2). <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/71151/"
+                                                  /></witness>
+                                                </listWit>
+                                            </witness>
+
+                                            <witness xml:id="G"> Vindobonensis hist. gr. 95, saec.
+                                                XV, ff. 303r-323r. <!--Digitalization available-->
+                                                <ptr
+                                                  target="https://digital.onb.ac.at/RepViewer/viewer.faces?doc=DTL_6024669&amp;order=1&amp;view=SINGLE"/>
+                                                <!--Note that in this string above, &amp; must be substituted when searching in a browser, since xml doesn't allow 
+                                                to write & alone, so I had to substitute here in the code with its entity translation "&amp;"--></witness>
+                                        </listWit>
+                                    </witness>
+
+                                    <witness xml:id="θ">Lost Manuscript <listWit>
+
+                                            <witness xml:id="V"> Marcianus 511, saec. XIV probably
+                                                it was the base for the Aldina edition on ff.
+                                                311v-318r [Cirignano = "M"] <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/69982/"/><listWit>
+
+                                                  <witness xml:id="L"> Laurentianus 55-22, saec. XV,
+                                                  ff. 198r-218v. <!--digitalization available-->
+                                                  <ptr
+                                                  target="https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/854000"
+                                                  /></witness>
+                                                  <witness xml:id="O"> Marcianus 369, saec. XV, ff.
+                                                  122r-128r. <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/69840/"
+                                                  /></witness>
+                                                  <witness xml:id="N"> Marcianus 368, saec. XV, ff.
+                                                  164r-171v. <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/69839/"
+                                                  /></witness>
+                                                </listWit>
+                                            </witness>
+
+                                            <witness xml:id="γ">Lost Manuscript <listWit>
+
+                                                  <witness xml:id="P"> Laurentianus conventi
+                                                  suppressi 110, saec. XV in., fragm. ff. 109r-111r.
+                                                  Title "Fragmentum περι συμποσιου του ξενοφωντος"
+                                                  [Cirignano = "C"]. <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/15838/"/><listWit>
+
+                                                  <witness xml:id="C"> Parisinus 2995, saec. XV in.,
+                                                  fragm. ff. 108r-110v. Title "(FRAGmg.) περι
+                                                  συμποσιου του ξενοφωντος ρητορος", da 8,35 μετα
+                                                  ξενων a 8,39 παρα σοι written by altera manu
+                                                  [Cirignano = "P"]. <!--Digitalization available-->
+                                                  <ptr
+                                                  target="https://gallica.bnf.fr/ark:/12148/btv1b10722854s"
+                                                  /></witness>
+                                                  </listWit>
+                                                  </witness>
+                                                  <witness xml:id="K"> Perusinus B34, saec. XV,
+                                                  written on two columns by Gerard from Patras,
+                                                  fragm. ff. 59r-60v. <ptr
+                                                  target="https://pinakes.irht.cnrs.fr/notices/cote/55391/"
+                                                  /></witness>
+                                                </listWit>
+                                            </witness>
+                                        </listWit>
+                                    </witness>
+                                </listWit>
+                            </witness>
+                        </listWit>
+                    </witness>
+                </listWit>
+
+                <!-- consensus codicum -->
+                <listWit xml:id="consensusCodicum">
+                    <head>Consensus Siglorum</head>
+                    <witness ref="#F"/>
+                    <witness ref="#D"/>
+                    <witness ref="#Z"/>
+                    <witness ref="#R"/>
+                    <witness ref="#H2"/>
+                    <witness ref="#VatUrbGr95"/>
+                    <witness ref="#E"/>
+                    <witness ref="#G"/>
+                    <witness ref="#M"/>
+                    <witness ref="#C"/>
+                    <witness ref="#K"/>
+                </listWit>
+
+                <!--Here it would be nice to add a section with a list of papyri hosting Xen Symp text.
+                    
+                N.B. Maybe it's better to substitute the @sameAs with @target, since the value it's a website URL-->
+                <listWit xml:id="papyri">
+                    <witness xml:id="PMon160" sameAs="http://papyri.info/dclp/64954">P. Mon. gr.
+                        Inv. 160 = Trismegistos 64954 = LDAB 6195. It carries Xen. Symp. III
+                        9-10.</witness>
+                    <witness xml:id="PAntI26" sameAs="http://papyri.info/dclp/62997">P. Ant. I 26
+                        = Trismegistos 62997 = LDAB 4189. It carries Xen. Symp. IV 51-55,
+                        64-5.3.</witness>
+                    <witness xml:id="PYaleII135"
+                        sameAs="https://papyri.info/dclp/59663?rows=3&amp;start=1&amp;fl=id,title&amp;fq=work_str:Symposium&amp;fq=author_str:Xenophon&amp;sort=series+asc,volume+asc,item+asc&amp;p=2&amp;t=3"
+                        >P. Yale II 135 =135 339 = Trismegistos 59663 = LDAB 765 =
+                        yale.apis.0012534200. It carries Xen. Symp. I, 9.</witness>
+                    <witness xml:id="PGiss175"
+                        sameAs="https://papyri.info/dclp/62996?rows=2&amp;start=2&amp;fl=id,title&amp;fq=work_str:Symposium&amp;fq=author_str:Xenophon&amp;sort=series+asc,volume+asc,item+asc&amp;p=3&amp;t=3"
+                        >P. Giss. 175 = Trismegistos 62996 = LDAB 4188. It carries Xen. Symp. VIII,
+                        15-18.</witness>
+                </listWit>
+
+                <!--inside the sourceDesc element, we can give further info about Names, Dates, People and Places. See module 13 of TEI Guidelines-->
+
+                <listOrg>
+                    <!--(list of organizations) contains a list of elements, each of which provides information about an identifiable organization.-->
+                    <org>
+                        <orgName sameAs="https://www.unibo.it/it">Alma Mater Studiorum</orgName>
+                    </org>
+                    <org>
+                        <orgName sameAs="https://ficlit.unibo.it/it">Dipartimento di Filologia Classica e Italianistica</orgName>
+                    </org>
+                    <org>
+                        <orgName sameAs="https://en.uoc.gr">University of Crete</orgName>
+                    </org>
+                    <org>
+                        <orgName sameAs="https://talos-ai4ssh.uoc.gr">Talos - AI4SSH</orgName>
+                    </org>
+                </listOrg>
+
+                <listPerson>
+                    <!--(list of persons) contains a list of descriptions, each of which provides information about an identifiable person or a group of people, for example the participants in a language interaction, or the people referred to in a historical source.-->
+                    <head>List of Characters</head>
+                    <person xml:id="Callias">
+                        <!--inserire per ciascuno il sameAs="VIAF", e guardare se esiste qualcosa su Perseus per autori classici-->
+                        <!--DOMANDA: assegnare xml:id in greco o in inglese?-->
+                        <persName>Καλλίας</persName>
+                    </person>
+                    <person xml:id="Hipponicus">
+                        <persName>Ἱππόνικος</persName>
+                    </person>
+                    <person xml:id="Autolycus">
+                        <persName>Αὐτόλυκος</persName>
+                    </person>
+                    <person xml:id="Niceratus">
+                        <persName>Νικήρατος</persName>
+                    </person>
+                    <person xml:id="Socrates">
+                        <persName sameAs="http://viaf.org/viaf/88039167">Σωκράτης</persName>
+                    </person>
+                    <person xml:id="Critobulus">
+                        <persName>Κριτόβουλος</persName>
+                    </person>
+                    <person xml:id="Hermogenes">
+                        <persName>Ἑρμογένης</persName>
+                    </person>
+                    <person xml:id="Antisthenes">
+                        <persName>Ἀντισθένης</persName>
+                    </person>
+                    <person xml:id="Charmides">
+                        <persName>Χαρμίδης</persName>
+                    </person>
+                    <person xml:id="Lycon">
+                        <persName>Λύκων</persName>
+                    </person>
+                    <person xml:id="Protagoras">
+                        <persName>Πρωταγόρας</persName>
+                    </person>
+                    <person xml:id="Gorgias">
+                        <persName>Γοργίας</persName>
+                    </person>
+                    <person xml:id="Prodicus">
+                        <persName>Πρόδικος</persName>
+                    </person>
+                    <person xml:id="Philip">
+                        <persName xml:id="Eros">Ἔρως</persName>
+                    </person>
+                </listPerson>
+
+
+
+
+                <listPlace>
+                    <!--(list of places) contains a list of places, optionally followed by a list of relationships (other than containment) defined amongst them.
+                        (encoded following EVT Guidelines)-->
+                    <head>List of Places</head>
+                    <place xml:id="Piraeus" sameAs="https://pleiades.stoa.org/places/580062">
+                        <settlement type="locality">Piraeus</settlement>
+                    </place>
+                </listPlace>
+            </sourceDesc>
+        </fileDesc>
+
+
+
+        <encodingDesc>
+            <!--encodingDesc element is the second major subdivision of the TEI header. It specifies the methods and editorial principles which governed the transcription or encoding of the text in hand and may also include sets of coded definitions used by other components of the header. Though not formally required, its use is highly recommended.-->
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <projectDesc>
+                <!--(project description) describes in detail the aim or purpose for which an electronic file was encoded, together with any other relevant information concerning the process by which it was assembled or collected.-->
+                <p>This is my Master Thesis Project at Alma Mater Studiorum - University of Bologna.
+                    It has been found by my institution via a scholarship which allowed me to apend
+                    a research period of three months as a "visitor researcher" at Talos Project, at
+                    University of Crete (UoC). It is an experimental thesis project, since its aim
+                    is to elaborate a workflow toward the modelling, encoding and visualization of a
+                    Digital Scholarly Edition, with the tools and the fundings available to an
+                    italian master student. The purpose is way distant to be exaustive, and it has
+                    been not possible to realize a complete Digital Scholarly Edition, since
+                    adfirmed scholars admitt it is a task that requires "a village" of researchers.
+                    I consider this enterprise as my personal swan's last song, my last contribution
+                    in the field of classical philology, so I am trying to enjoy the most a kind of
+                    life that I don't feel as mine, the one of a classical philology researcher. I
+                    hope by this small contribution to add a small but hopefully significant brick
+                    in the tower of scientific community</p>
+            </projectDesc>
+            <editorialDecl>
+                <!--(editorial practice declaration) provides details of editorial principles and practices applied during the encoding of a text. Check here the module: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-editorialDecl.html-->
+                <correction>
+                    <p/>
+                </correction>
+
+                <interpretation>
+                    <!--describes the scope of any analytic or interpretive information
+                    added to the text in addition to the transcription</interpretation-->
+                    <p/>
+                </interpretation>
+                <normalization>
+                    <p/>
+                </normalization>
+                <punctuation>
+                    <p/>
+                </punctuation>
+                <quotation>
+                    <p/>
+                </quotation>
+                <segmentation>
+                    <!--the principles according to which the text has been segmented, for
+                    example into sentences, tone-units, graphemic strata, etc.-->
+                    <p>In the present project, the critical text has been subdivided into divisions
+                        containing further divisions, each of which has its own unique xml:id, of
+                        books and chapters. Since the encoding doesn't cover the full text, but only
+                        selected specimina, I decided to assign a number to every book and paragraph
+                        as the full work would have been encoded, so numbers may seem incoherent.
+                        This was made hoping to be able to completely encode the work in the next
+                        years, with no rush due to academic deadlines.</p>
+                </segmentation>
+
+            </editorialDecl>
+            <tagsDecl>
+                <!--(tagging declaration) provides detailed information about the tagging applied to a document.-->
+            </tagsDecl>
+            <schemaSpec ident="figureitout">
+                <!--(schema specification) generates a TEI-conformant schema and documentation for it.-->
+            </schemaSpec>
+            <schemaRef url="#figureitout">
+                <!--(schema reference) describes or points to a related customization or schema file-->
+            </schemaRef>
+        </encodingDesc>
+
+
+
+        <profileDesc>
+            <!--profileDesc element is the third major subdivision of the TEI header. It is an optional element, 
+                the purpose of which is to enable information characterizing various descriptive aspects of a 
+                text or a corpus to be recorded within a single unified framework-->
+            <!--(text-profile description) provides a detailed description of non-bibliographic aspects of a text, 
+                specifically the languages and sublanguages used, the situation in which it was produced, the 
+                participants and their setting.-->
+
+            <abstract>
+                <!--contains a summary or formal abstract prefixed to an existing source document by the encoder.-->
+                <p/>
+            </abstract>
+
+            <langUsage>
+                <!--describes the languages, sublanguages, registers, dialects, etc. represented within a text.-->
+                <p>The main two languages used in the present projects are ancient greek and
+                    english, the former used to represent the text of Xenophon's Symposium, and the
+                    latter is used for the encoding and the scientific aspect of my research.</p>
+            </langUsage>
+            <textClass>
+                <!--(text classification) groups information which describes the nature or topic of a text in terms of a standard classification scheme, thesaurus, etc.-->
+            </textClass>
+            <calendarDesc>
+                <!--(calendar description) contains a description of the calendar system used in any dating expression found in the text.-->
+                <calendar>
+                    <p/>
+                </calendar>
+            </calendarDesc>
+            <!-- <particDesc>
+                <listPerson>
+                    <person>
+                        <persName/>
+                    </person>
+                </listPerson>
+            </particDesc> -->
+        </profileDesc>
+
+
+
+        <revisionDesc>
+            <!--final sub-element of the TEI header, it provides a detailed change log in which each change made to a text may be recorded. Its use is optional but highly recommended. No significant change should be made in any TEI-conformant file without corresponding entries being made in the change log.-->
+            <listChange>
+                <change/>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    
+    
+    <text>
+        <front>
+            <head>Xenophon's Symposium. Selected specimina for a Digital Scholarly Edition</head>
+
+            <div type="introduction" xml:id="intro" xml:lang="eng">
+                <ab>Introduction</ab>
+                <p>....................................................................</p>
+            </div>
+
+            <div type="stemma">
+                <ab>Stemma Codicum</ab>
+                <p>Inserire qui l'immagine dello stemma codicum di Huss</p>
+                <!--Inserire qui l'immagine dello stemma codicum di Huss-->
+            </div>
+        </front>
+        
+        
+        <body xml:id="bodyCore" xml:lang="grc">
+
+            <!--The idea is to give a full markup of Book 1, and then take some more passages from other books 
+                that are useful to show all the possibilities of representation offered by XML/TEI markup-->
+            <!--In particular, encoding the full Book 1 serves me to demonstrate how is it possible to represent textual variants 
+                and their particularities, according to the choices made by a scholar before me. In this part I assign to myself 
+                the only role to represent choices made by scholars who preceded me. 
+            My own judgement will be called in action for the following small specimina from other books of Xenophon's Symposium-->
+
+
+
+            <!--A note on how to consider the different types of variant readings: 
+            - simple reading: encoded with <rdg wit="#..." type="..." cause="..." place="..." rend="...">
+            - conjecture of modern scholar: encoded with <rdg source="#..." resp="#...">, which point to xml:ids of sources and resps in a specific listPerson for modern scholars
+            - reading from indirect tradition: encoded with <rdg source="#xml:id of the source in listBibl of indirect tradition" resp="#scholar_
+            who_says_the_lesson_comes_from_the_ancient_author"> followed by a <note source="#xml:id of the source">Plain text</note> 
+            with a plain text description of the passage (ex. Athenaeus, Deipnosophistae, I.3.56).
+            According to prof. Neri's suggestion and considering the limits of representation imposed by TEI Guidelines, in the
+            present project I will consider le lessons provided by ancient authors (indirect tradition) as readings coming from a printed 
+            modern edition of their works. This means that in the <witDetail> I will refer to the TLG edition of the work in question.
+            
+            Now, what if a reading chosen by a modern scholar comes from a particular witness? how can I represent this?
+            probably I just shoud encode in this way: <rdg wit="#manuscript" resp="#scholar"-->
+
+            <!--Another remark on how I proceeded for marking up the apparatus entries: 
+            I started writing down all the readings noted by Cirignano in chapter V of his PhD thesis (page 115ss.) as a starting point; 
+            after, I checked all the apparati from the different critical editions I consulted (Marchant, Ollier, Cirignano and Jackson), one by one,
+            and also the non critical edition by Giovanelli, and according to what each scholar reports, I decided if and how report what they say.[14/05/24]-->
+
+            <div type="title" xml:id="textTitle">
+                <head>Ξενοφώντος <app>
+                        <lem wit="#E" resp="#OF"/>
+                        <rdg wit="#D" resp="#OF">ῥήτορος</rdg>
+                    </app> Συμπόσιον </head>
+            </div>
+
+            <div type="specimen" n="1" xml:id="specChap_1_full">
+              <div type="head">
+                <head>Chapter 1</head>
+              </div>
+
+                <div type="paragraph" n="1" xml:id="c1p1">
+                    <p> Ἀλλ’ <app>
+                            <lem>ἐμοὶ</lem>
+                            <!--when it comes to a reading coming from an ancient author, source of Indirect Tradition, I decided to encode in this way: 
+                        <rdg source="#xml:id of the source" resp="#xml:id of the scholar attesting this">, followed by a 
+                        <note source="#xml:id of the source">-->
+                            <rdg wit="#Aristides" source="#ArisArsRhet" resp="#MEC #OF">ἔμοιγε</rdg>
+                            <note source="#ArisArsRhet">Aristides, Ars Rhetorica, ii.517.2 et
+                                525.12</note>
+                        </app> δοκεῖ τῶν καλῶν κἀγαθῶν ἀνδρῶν <app>
+                            <lem>ἔργα</lem>
+                            <rdg wit="#Aristides" source="#ArisArsRhet" resp="#MEC #OF" type="omission"/>
+                            <note source="#ArisArsRhet">Aristides, Ars Rhetorica, ii.517.2 et
+                                525.12</note>
+                        </app> οὐ μόνον <app>
+                            <lem>τὰ</lem>
+                            <rdg wit="#G #Ha" resp="#MEC #OF" type="omission"/>
+                        </app> μετὰ σπουδῆς πραττόμενα ἀξιομνημόνευτα εἶναι, ἀλλὰ καὶ <app>
+                            <lem>τὰ</lem>
+                            <rdg wit="#H2 #Q #R #Z" resp="#CJS"/>
+                            <!-- different resp for each rdg -->
+                            <!--<rdg wit="#H2" resp="#MEC #OF #CJS"/>
+                            <rdg wit="#Q #R" resp="#OF #CJS"/>
+                            <rdg wit="#Z #Q #R" resp="#CJS"/>-->
+                        </app> ἐν ταῖς παιδιαῖς. οἷς δὲ παραγενόμενος ταῦτα γιγνώσκω <app>
+                            <lem>δηλῶσαι</lem>
+                            <rdg wit="#Η2" resp="#CJS">δηλώσω</rdg>
+                        </app> βούλομαι.</p>
+                </div>
+
+                <div type="paragraph" n="2" xml:id="c1p2">
+                    <p> ἦν μὲν <app>
+                            <lem>γὰρ</lem>
+                            <rdg wit="#B" resp="#CJS" type="omission"/>
+                        </app> Παναθηναίων τῶν μεγάλων ἱπποδρομία, <persName ref="#Callias"
+                            >Καλλίας</persName> δὲ ὁ <persName ref="#Hipponicus"
+                            >Ἱππονίκου</persName> ἐρῶν ἐτύγχανεν <persName ref="#Autolycus"
+                            >Αὐτολύκου</persName> παιδὸς ὄντος, καὶ νενικηκότα αὐτὸν παγκράτιον ἧκεν <app>
+                            <lem>ἄγων</lem>
+                            <rdg wit="H2" resp="#CJS">ἄγω</rdg>
+                        </app> ἐπὶ τὴν θέαν. ὡς δὲ ἡ ἱπποδρομία ἔληξεν, ἔχων τόν τε <persName
+                            ref="#Autolycus">Αὐτόλυκον</persName> καὶ τὸν πατέρα αὐτοῦ ἀπῄει εἰς τὴν
+                        ἐν <placeName ref="#Piraeus">Πειραιεῖ</placeName> οἰκίαν· συνείπετο δὲ αὐτῷ
+                        καὶ <persName ref="#Niceratus">Νικήρατος</persName>.</p>
+                </div>
+
+                <div type="paragraph" n="3" xml:id="c1p3">
+                    <p> ἰδὼν δὲ ὁμοῦ ὄντας <persName ref="#Socrates">
+                            <app>
+                                <lem><persName ref="#Socrates">Σωκράτην</persName></lem>
+                                <rdg wit="#F" cause="orthographic" resp="#MEC"><persName
+                                        ref="#Socrates">Σωκράτη</persName></rdg>
+                                <witDetail wit="#F" resp="#MEC">Manuscript F reports the singular
+                                    accusative of Σώκρατης -η instead of -ην everywhere</witDetail>
+                            </app></persName>
+                        <app>
+                            <lem>τε</lem>
+                            <rdg wit="#X #B" resp="#CJS"/>
+                        </app> καὶ <persName ref="#Critobulus">Κριτόβουλον</persName> καὶ <persName
+                            ref="#Hermogenes">Ἑρμογένην</persName> καὶ <persName ref="#Antisthenes">
+                            <app>
+                                <lem><persName ref="#Antisthenes">Ἀντισθένην</persName></lem>
+                                <rdg wit="#F #H2" cause="orthographic" resp="#MEC"><persName
+                                        ref="#Antisthenes">Ἀντισθένη</persName></rdg>
+                            </app></persName> καὶ <persName ref="#Charmides">Χαρμίδην</persName>,
+                        τοῖς μὲν ἀμφ’ <persName ref="#Autolycus">Αὐτόλυκον</persName> ἡγεῖσθαί τινα
+                        ἔταξεν, αὐτὸς δὲ προσῆλθε τοῖς ἀμφὶ <persName ref="#Socrates"
+                            >Σωκράτην</persName>, καὶ εἶπεν·</p>
+                </div>
+
+                <div type="paragraph" n="4" xml:id="c1p4">
+                    <p>
+                        <!--here we find the first direct speech-->
+                        <said who="#Callias" direct="true">Εἰς καλόν γε ὑμῖν <app>
+                                <lem>συντετύχηκα</lem>
+                                <rdg wit="#R" type="substantial" resp="#CJS">συντετύχηκας</rdg>
+                                <rdg wit="#H2" type="substantial" resp="#CJS">συντετύχη</rdg>
+                            </app>· ἑστιᾶν γὰρ μέλλω <persName ref="#Autolycus">Αὐτόλυκον</persName>
+                            καὶ τὸν πατέρα αὐτοῦ. οἶμαι οὖν <app>
+                                <lem/>
+                                <rdg wit="#O" resp="#CJS">εἶπεν</rdg>
+                            </app> πολὺ ἂν τὴν κατασκευήν μοι λαμπροτέραν φανῆναι εἰ ἀνδράσιν <app>
+                                <!--Come faccio a rappresentare che questa è da un lato una lezione riportata da Elio Aristide in ii.554.14, 
+                                    e dall'altro una correzione super versum nel codice A?-->
+                                <lem wit="#A" source="#ArisArsRhet" resp="#MEC #OF #CJS #JDF"
+                                    >ἐκκεκαθαρμένοις</lem>
+                                <note source="#ArisArsRhet" rend="superscript">Aristides, Ars
+                                    Rhetorica ii.554.14</note>
+                                <witDetail wit="#A">Manuscript A supra versum</witDetail>
+                                <!--Come rappresentare il consensus codicum?    RIPORTANDO L'INTERA LISTA DEI CODICI (suggerimento di Neri)-->
+                                <rdg wit="#VatUrbGr95 #g #F #D #r #Z #Q #Mut129 #Mon494 #q #R #H2 #E #Ha #X #B #H1 #G #V #L #O #N #P #C #K" type="substantial">ἐγκεκαθαρμένοις</rdg>
+                            </app> τὰς ψυχὰς ὥσπερ ὑμῖν ὁ <app>
+                                <lem>ἀνδρὼν</lem>
+                                <rdg wit="#B">ἀνδρός</rdg>
+                            </app> κεκοσμημένος <app>
+                                <lem>εἴη</lem>
+                                <rdg wit="#B" type="substantial">εἰ</rdg>
+                            </app> μᾶλλον ἢ <app>
+                                <lem>εἰ</lem>
+                                <rdg wit="#O"/>
+                            </app> στρατηγοῖς καὶ <app>
+                                <!--qui il problema è che in apparato si dice che i codici abbiano consenso o 
+                                in ιππάρχοις o in ιππάρχαις. bene. come rappresento questa cosa? con un elemento <choice>?
+                                In questo caso, penso sia giunto il momento di sfoderare il MIO GIUDIZIO, prendere posizione, 
+                                e scegliere di menzionare una lezione piuttosto che l'altra-->
+                                <lem wit="#consensusCodicum" resp="#MEC #OF #CJS">ἱππάρχοις</lem>
+                                <rdg wit="#D #F #G #E #VatUrbGr95 #Aristides" source="#ArisArsRhet" cause="graphic">ἱππάρχαις</rdg>
+                                <!--si ripresenta il problema di come rappresentare il consensus codicum-->
+                                <!-- <rdg wit="#D #F #G #E" source="#ArisArsRhet" type="graphic"
+                                    resp="#OF">ἱππάρχαις</rdg> -->
+                                <witDetail wit="#E" resp="#OF">Manuscript E reports this reading
+                                    super versum.</witDetail>
+                                <note source="#ArisArsRhet">Aristides, Ars Rhetorica ii.554.14</note>
+                                <!-- <rdg wit="#VatUrbGr95" resp="#JDF">ἱππάρχαις</rdg> -->
+                                <rdg wit="#B" cause="substantial" resp="#OF">ὑπάρχαις</rdg>
+                            </app> καὶ <app>
+                                <!--qui invece c'è la prima congettura di uno studioso moderno: devo fare nel teiHeader una listPerson con l'elenco degli studiosi che andrò a menzionare? sì, fatta!-->
+                                <lem source="#DindXenScripMin" resp="#Dindorf">σπουδαρχίαις</lem>
+                                <rdg wit="#consensusCodicum">σπουδάρχαις</rdg>
+                                <rdg source="#MehlXenScripMin" resp="#Mehler">σπουδαρχίδαις</rdg>
+                                <note>σπουδαρχίαις Dindorf : σπουδαρχίδαις Mehler</note>
+                            </app>.</said></p>
+                </div>
+
+                <div type="paragraph" n="5" xml:id="c1p5">
+                    <p> καὶ ὁ <persName ref="#Socrates">Σωκράτης</persName> εἶπεν· <said
+                            who="#Socrates" direct="true">Ἀεὶ σὺ ἐπισκώπτεις ἡμᾶς <app>
+                                <lem>καταφρονῶν</lem>
+                                <rdg wit="#Aristides" source="#AriArsRhet" resp="#OF" type="omission"/>
+                            </app>, ὅτι <app>
+                                <!-- d'ora in poi le addition trattiamole così (insieme a Martina) -->
+                                <lem>σὺ</lem>
+                                <rdg wit="#G" resp="#CJS">
+                                    <add>οὐ</add> σὺ
+                                </rdg>
+                            </app> μὲν <persName ref="#Protagoras">Πρωταγόρᾳ</persName>
+                            <app>
+                                <lem>τε</lem>
+                                <rdg wit="#Aristides" source="#AriArsRhet" resp="#OF" type="omission"/>
+                            </app> πολὺ ἀργύριον δέδωκας ἐπὶ σοφίᾳ καὶ <persName ref="#Gorgias"
+                                >Γοργίᾳ</persName> καὶ <persName ref="#Prodicus">Προδίκῳ</persName>
+                            καὶ ἄλλοις πολλοῖς, ἡμᾶς δ’ ὁρᾷς αὐτουργούς τινας τῆς <app>
+                                <lem>φιλοσοφίας</lem>
+                                <rdg wit="#Ha" resp="#CJS">σοφίας</rdg>
+                            </app> ὄντας</said>.</p>
+                </div>
+
+                <div type="paragraph" n="6" xml:id="c1p6">
+                    <p> καὶ ὁ <persName ref="#Callias">Καλλίας</persName>, <said who="#Callias"
+                            direct="true">
+                            <app>
+                                <lem wit="#consensusCodicum">Καὶ</lem>
+                                <rdg wit="#Ha" type="omission" resp="#CJS"/>
+                            </app> πρόσθεν μέν γε</said>, ἔφη, <said who="#Callias" direct="true"
+                            >ἀπεκρυπτόμην ὑμᾶς ἔχων πολλὰ καὶ σοφὰ λέγειν, <app>
+                                <lem>νῦν δέ, ἐὰν παρ’ ἐμοὶ ἦτε, ἐπιδείξω ὑμῖν ἐμαυτὸν πάνυ πολλῆς
+                                    σπουδῆς ἄξιον ὄντα</lem>
+                                <rdg wit="#N" resp="#CJS" type="omission"/>
+                            </app></said>.</p>
+                </div>
+
+                <div type="paragraph" n="7" xml:id="c1p7">
+                    <p>οἱ οὖν ἀμφὶ τὸν <persName ref="#Socrates">Σωκράτην</persName> πρῶτον μέν,
+                        ὥσπερ εἰκὸς ἦν, ἐπαινοῦντες τὴν κλῆσιν οὐχ ὑπισχνοῦντο συνδειπνήσειν· ὡς δὲ
+                        πάνυ ἀχθόμενος φανερὸς <app>
+                            <lem>ἦν</lem>
+                            <rdg wit="#Aristides" source="#AriarsRhet" resp="#OF">
+                                ἦν <add>ἀχθόμενος</add>
+                            </rdg>
+                        </app>, εἰ μὴ ἕψοιντο, συνηκολού θησαν. ἔπειτα δὲ αὐτῷ <app>
+                            <lem>οἱ μὲν γυμνασάμενοι καὶ <app>
+                                    <lem>χρισάμενοι</lem>
+                                    <!-- type="orthographic" -->
+                                    <rdg wit="#A #H1" cause="iotacism"
+                                        resp="#CJS">χρησάμενοι</rdg>
+                                    <rdg wit="#A" type="addition" rend="superscript" resp="#CJS"
+                                        >χρωσάμενοι</rdg>
+                                        <note>χρωσάμενοι A supra versum.</note>
+                                        <witDetail wit="#A">Manuscript A added the reading χρωσάμενοι
+                                            supra versum</witDetail>
+                                </app>
+                            </lem>
+                            <rdg source="#ArisArsRhet" resp="#OF" type="substantial">οἱ μέν τινες
+                                χρισάμενοι</rdg>
+                        </app>, οἱ δὲ καὶ λουσάμενοι <app>
+                            <lem wit="#Alexis #Athenaeus #Naber #Marchant" resp="#Naber #Marchant" source="#AthenDeipnosoph #AlexisPann #NabXenScripMin #XenSympMarchant">παρῆλθον</lem>
+                            <note>"παρῆλθον tuetur Naber coll. Alexis ap. Athen. iv. 170 B :
+                                προσῆλθον Richards : cf. Com. III. vii. i" so reports Marchant in his critical apparatus.</note>
+                            <!--Alessi (Pannuchis, fr. 179 K-A, = 174 Kock) usa παρελθών ("δεῖπνον αἰτήσεις με σύ ἤδη παρελθών"); 
+                            Ateneo (iv170b, ed. Kaibel vol. 1 p. 383) riporta questo passo di Alessi dove usa παρελθών; sulla base di questa concatenazione di tradizione indiretta, 
+                            Naber sceglie la lezione παρῆλθον scartando προσῆλθον, e sulla sua scia f la stessa scelta Marchant, che ci riporta tutte 
+                            queste informazioni in apparato.
+                            Cosa implicano queste considerazioni per il mio markup?
+                            a) il primo a proporre quest'interpretazione è Naber, perciò la @resp va attribuita a lui; 
+                            b) sono d'accordo con quesa lezione? valutare in base all'usus scribendi di Senofonte -->
+                            <!--___________________________________________________________________________________________________________________________________________________-->
+                            <rdg wit="#Richards" resp="Richards">προσῆλθον</rdg>
+                        </app>.</p>
+                </div>
+
+                <div type="paragraph" n="8" xml:id="c1p8">
+                    <p><persName ref="#Autolycus">Αὐτόλυκος</persName> μὲν οὖν παρὰ τὸν πατέρα
+                        ἐκαθέζετο, οἱ δ’ ἄλλοι, ὥσπερ εἰκός, <app>
+                            <lem>κατεκλίθησαν</lem>
+                            <rdg resp="#Mehler #Cobet">κατεκλίνησαν</rdg>
+                        </app>. εὐθὺς <app>
+                            <lem>μὲν</lem>
+                            <rdg wit="#V" type="omission" resp="#OF #CJS"/>
+                            <rdg wit="#O #L #N" type="omission" resp="#CJS"/>
+                            <!--qui bisogna riportare che μεν è omesso anche nell'edizione Aldina (@respp. sia Ollier che Cirignano), per cui bisogna creare un'entrata nella lista delle edizioni-->
+                        </app>
+                        <app>
+                            <lem>οὖν</lem>
+                            <rdg wit="#G" resp="#MEC #OF"/>
+                        </app> ἐννοήσας <app>
+                            <lem source="#ArisArsRHet" resp="#MEC #OF" type="addition">
+                                <add>τις</add></lem>
+                            <rdg wit="codd." type="omission"/>
+                        </app>
+                        <app>
+                            <lem>τὰ</lem>
+                            <rdg wit="#X" type="addition" resp="#CJS">
+                                <add>τὰ</add>
+                            </rdg>
+                        </app> γιγνόμενα ἡγήσατ’ ἂν φύσει βασιλικόν <app>
+                            <lem wit="codd." resp="#MEC">τι</lem>
+                            <rdg wit="#L" resp="#CJS">τινα</rdg>
+                            <!--Dunque per le congetture uso @source="#xml:id", dove xml:id punta all'URI del <bibl> padre di <author> e di <title>-->
+                            <rdg source="#ArisArsRhet" resp="#MEC #OF" type="addition">
+                                <add>τὸ</add>
+                            </rdg>
+                        </app> κάλλος <!--Qui comincia una lunga lacuna nel cod. H2, che termina al par. 9 con Αὐτόλυκου τὸ κάλλος. 
+                            Secondo le direttive della Bourghart dovrei fare un lungo <lem> fino a laggiù, trascendendo i confini dei paragrafi 8 e 9. 
+                            Ma ciò non è reso possibile da Oxygen, che segnala errore. Forse perché i confini di questo lungo lem travalicano due div diverse.
+                        Il problema rimane aperto, non so come risolverlo.
+                        
+                        
+                        NB: Spezzare la lacuna in 2, una all'interno della div del paragrafo 8, l'altra all'interno della div del paragrafo 9
+                    
+                        
+                        -->
+                        <!--lacunaStart in H2. -->
+                        <app>
+                            <lem> εἶναι, ἄλλως τε καὶ ἂν μετ’ αἰδοῦς καὶ σωφροσύνης, καθάπερ
+                                    <persName ref="#Autolycus">Αὐτόλυκος</persName>
+                                <app>
+                                    <lem>τότε</lem>
+                                    <rdg source="#ArisArsRhet" resp="#OF" type="omission"/>
+                                </app>, <app>
+                                    <lem>κεκτῆταί</lem>
+                                    <rdg wit="codd.plerique">κέκτηταί</rdg>
+                                    <!--il problema qui è che Marchant riporta un'info vaga: dice "la maggior parte dei codici" senza riportare quali. Io come devo 
+                                rappresentare quest'info, dal momento che Cirignano, che pur fornisce di solito maggiori info sulla collazione dei codd., 
+                                su questo passo non dice nulla??????-->
+                                </app> τις αὐτό. </lem>
+
+
+                            <rdg wit="#H2"><lacunaStart wit="#H2"/></rdg>
+
+
+                        </app>
+                    </p>
+
+                </div>
+
+                <div type="paragraph" n="9" xml:id="c1p9">
+                    <p>
+                        <app>
+                            <lem> πρῶτον μὲν γάρ, ὥσπερ <app>
+                                    <lem>ὅταν</lem>
+                                    <rdg wit="#R" resp="#CJS" type="omission"/>
+                                </app> φέγγος <app>
+                                    <lem>τι</lem>
+                                    <rdg wit="R" resp="#CJS" type="omission"/>
+                                    <rdg source="#AthenDeipnosoph" resp="#OF" type="omission"/>
+                                    <note>Athenaeus reports this omission in <bibl
+                                            corresp="#AthenDeipnosoph">Deipnosophistes V 118
+                                            A</bibl>.</note>
+                                </app> ἐν νυκτὶ <app>
+                                    <lem>φανῇ</lem>
+                                    <rdg source="#AthenDeipnosoph" resp="#OF" type="substantial"
+                                        >παρῇ</rdg>
+                                    <note><persName ref="#Athenaeus">Athenaeus</persName>, <bibl
+                                            corresp="#AthenDeipnosoph">Deipnosophistes V 118
+                                            A</bibl>.</note>
+                                </app>, πάντων προσάγεται <app>
+                                    <lem/>
+                                    <rdg wit="#O" type="addidion">
+                                        <add>εἰς</add>
+                                    </rdg>
+                                </app>τὰ ὄμματα, οὕτω <app>
+                                    <lem>καὶ τότε τοῦ <persName ref="#Autolycus"
+                                            >Αὐτόλυκου</persName> τὸ κάλλος</lem>
+                                    <rdg source="#AthenDeipnosoph" resp="OF" type="substantial">καὶ
+                                        τὸ Αυτολύκου κάλλος</rdg>
+                                </app>
+                                <!--lacunaEnd in H2-->
+                            </lem>
+                            <rdg wit="#H2" type="lacuna"><lacunaEnd wit="#H2"/></rdg>
+                        </app> πάντων <app>
+                            <lem>εἷλκε</lem>
+                            <rdg source="#AthenDeipnosoph" resp="#OF">ἐφέλκεται</rdg>
+                        </app> τὰς ὄψεις <app>
+                            <lem>πρὸς</lem>
+                            <rdg source="#AthenDeipnosoph" resp="OF">ἐφ'</rdg>
+                        </app>
+                        <app>
+                            <lem>αὐτόν</lem>
+                            <rdg resp="#Petraglia" source="#PetragliaIndTrad">αὐτό</rdg>
+                            <note>Petraglia proposes this conjectur after comparing the passage with
+                                    <persName ref="#Plotinus">Plotinus</persName>, <bibl
+                                    corresp="#PlotDePulchr">Liber de pulchritudine i 6 1, ll.
+                                    17-19</bibl>. </note>
+                            <rdg source="#AthenDeipnosoph" resp="#OF">αὐτό</rdg>
+                        </app> · ἔπειτα τῶν <app>
+                            <lem>ὁρώντων οὐδεὶς οὐκ</lem>
+                            <rdg source="#Athenaeus" resp="#MEC #OF" type="substantial">παρόντων
+                                οὐδεὶς ἦν ὃς οὐκ</rdg>
+                            <note><persName ref="#Athenaeus">Athenaeus</persName>, <bibl
+                                    corresp="#AthenDeipnosoph">Deipnosofistes V 188 A</bibl>
+                            </note>
+                        </app> ἔπασχέ <app>
+                            <lem>τι</lem>
+                            <rdg wit="#Ha" resp="#CJS" type="omissio"/>
+                        </app> τὴν ψυχὴν <!--da υπςεκεινου a δε και εσχηματιζοντο è omesso in H2-->
+                        <app>
+                            <lem>ὑπ’ἐκείνου</lem>
+                            <rdg wit="#F" type="substantial" resp="#CJS">πρὸς ἐκεῖνον</rdg>
+                            <witDetail wit="#F">Manuscript F reports this lesson ante
+                                correctionem</witDetail>
+                        </app> . οἱ μέν <app>
+                            <lem>γε</lem>
+                            <rdg resp="#Mehler" type="addition">
+                                <add>γὰρ</add>
+                            </rdg>
+                        </app>
+                        <app>
+                            <lem>σιωπηρότεροι</lem>
+                            <rdg source="#AthenDeipnosoph" resp="#OF" type="rotacism"
+                                >σιωπηλότεροι</rdg>
+                        </app> ἐγίγνοντο, οἱ δὲ <app>
+                            <lem>καὶ</lem>
+                            <rdg wit="#R" resp="#CJS"/>
+                        </app>
+                        <app>
+                            <lem>ἐσχηματίζοντό</lem>
+                            <rdg wit="#A" resp="#OF" type="substantial">ἐσχημάτιζον</rdg>
+                            <rdg wit="#G" type="omission" resp="#OF"/>
+                        </app> πως.</p>
+                </div>
+
+                <div type="paragraph" n="10" xml:id="c1p10">
+                    <p>
+                        <app>
+                            <lem>πάντες</lem>
+                            <rdg source="#ArisArsRhet" resp="#OF">ἅπαντες</rdg>
+                        </app> μὲν οὖν <app>
+                            <lem>οἱ</lem>
+                            <rdg wit="#B" resp="#CJS"/>
+                        </app> ἐκ θεῶν του κατεχόμενοι ἀξιοθέατοι δοκοῦσιν εἶναι· ἀλλ’ οἱ μὲν <app>
+                            <lem/>
+                            <rdg wit="#B" type="addition" resp="#CJS">
+                                <add>οὖν</add>
+                            </rdg>
+                        </app>ἐξ ἄλλων πρὸς τὸ <app>
+                            <lem source="#Stephanus" resp="#MEC #OF">γοργότεροί</lem>
+                            <rdg wit="#codd." source="#ArisArsRhet" resp="#MEC #OF">γοργότερόν</rdg>
+                        </app>
+                        <app>
+                            <lem>τε</lem>
+                            <rdg wit="#Q #F" source="#ArisArsRhet" type="omission" resp="#OF"/>
+                            <rdg wit="#R" type="omission" resp="#OF #CJS"/>
+                        </app> ὁρᾶσθαι <app>
+                            <lem>καὶ</lem>
+                            <rdg wit="#O">ἐν</rdg>
+                        </app> φοβερώτερον φθέγγεσθαι καὶ <app>
+                            <lem>σφοδρότεροι</lem>
+                            <rdg wit="#A #B #H1" type="substantial" resp="#MEC #OF #CJS"
+                                >σφοδρότερον</rdg>
+                            <rdg wit="#G" resp="#MEC #OF">σφοδρότερον</rdg>
+                            <rdg wit="#X" resp="#CJS">σφοδρότερον</rdg>
+                        </app> εἶναι <app>
+                            <lem>φέρονται</lem>
+                            <!--altra congettura di Aristide: come riportarla? Inoltre F riporta questa variante s.v. (supra versum): come riportarlo?-->
+                            <rdg wit="#F" rend="superscript" source="#ArisArsRhet"
+                                resp="#MEC #OF #CJS">φαίνονται</rdg>
+                            <witDetail wit="#F">Manuscript F reports this reading supra versum,
+                                which is also a conjecture by Aelius Aristides.</witDetail>
+                            <rdg wit="#Q #R" resp="#OF #CJS">φαίνονται</rdg>
+                        </app>, οἱ δ’ ὑπὸ τοῦ σώφρονος <persName ref="#Eros">ἔρωτος</persName>
+                        ἔνθεοι τά τε ὄμματα <app>
+                            <lem>φιλοφρονεστέρως</lem>
+                            <rdg wit="#H2" type="orthographic" resp="#CJS">φιλοφρονεστένως</rdg>
+                        </app> ἔχουσι καὶ τὴν φωνὴν <app>
+                            <lem>πρᾳοτέραν ποιοῦνται</lem>
+                            <rdg resp="#Mehler">προίενται</rdg>
+                        </app>
+                        <app>
+                            <lem>καὶ τὰ σχήματα</lem>
+                            <rdg wit="#B" type="addition" cause="repetition" resp="#CJS">
+                                <add>καὶ τὰ σχήματα</add>
+                            </rdg>
+                        </app> εἰς τὸ <app>
+                            <lem resp="#MEC #OF">ἐλευθεριώτερον</lem>
+                            <rdg wit="#A" resp="#MEC #OF">ἐλευθερότερον</rdg>
+                            <rdg wit="#codd." resp="#MEC #OF">ἐλευθερ(ι)ώτατον</rdg>
+                            <!--congettura di Cirignano che mette a testo; non così Marchant-->
+                            <rdg resp="#CJS">ἐλευθερώτατον</rdg>
+                        </app> ἄγουσιν. ἃ δὴ καὶ <persName ref="#Callias">Καλλίας</persName> τότε
+                        διὰ τὸν <persName ref="#Eros">ἔρωτα</persName> πράττων ἀξιοθέατος ἦν τοῖς <app>
+                            <lem/>
+                            <rdg wit="#Q" type="addition" resp="#OF">
+                                <add>γε</add>
+                            </rdg>
+                        </app> τετελεσμένοις τούτῳ τῷ θεῷ.</p>
+                </div>
+
+                <div type="paragraph" n="11" xml:id="c1p11">
+                    <p>ἐκεῖνοι μὲν οὖν σιωπῇ ἐδείπνουν, ὥσπερ τοῦτο ἐπιτεταγμένον αὐτοῖς ὑπὸ
+                        κρείττονός τινος. <persName ref="#Philip">Φίλιππος</persName> δ’ ὁ
+                        γελωτοποιὸς κρούσας τὴν θύραν εἶπε τῷ ὑπακούσαντι <said who="#Philip"
+                            direct="false">εἰσαγγεῖλαι ὅστις τε εἴη καὶ δι’ ὅ τι κατάγεσθαι <app>
+                                <lem>βούλοιτο</lem>
+                                <rdg source="#AthenDeipnosoph" resp="#MEC #OF">βούλεται</rdg>
+                                <note>Athenaeus, <bibl corresp="#AthenDeipnosoph">Deipnosofistes
+                                        XIV. 614 C</bibl>.</note>
+                            </app>, συνεσκευασμένος <app>
+                                <lem>τε</lem>
+                                <rdg source="#AthenDeipnosoph" resp="#MEC #OF">δὲ</rdg>
+                            </app>
+                            <app>
+                                <lem>παρεῖναι ἔφη</lem>
+                                <rdg source="#AthenDeipnosoph" resp="#OF">ἔφη παρεῖναι</rdg>
+                            </app> πάντα τὰ ἐπιτήδεια ὥστε <app>
+                                <lem/>
+                                <rdg source="#AthenDeipnosoph" type="addition" resp="#MEC">
+                                    <add>καὶ</add>
+                                </rdg>
+                            </app> δειπνεῖν τἀλλότρια, καὶ τὸν παῖδα δὲ ἔφη πάνυ πιέζεσθαι διά τε τὸ
+                            φέρειν <app>
+                                <lem>μηδὲν</lem>
+                                <rdg resp="#Naber" type="deletion"/>
+                                <!--forse qui dovrei marcare questa espunzione del Naber con l'elemento <del>???-->
+                            </app> καὶ διὰ τὸ ἀνάριστον εἶναι</said>.</p>
+                </div>
+
+                <div type="paragraph" n="12" xml:id="c1p12">
+                    <p>ὁ οὖν <persName ref="#Callias">Καλλίας</persName> ἀκούσας ταῦτα εἶπεν· <said
+                            who="#Callias" direct="true">Ἀλλὰ μέντοι <app>
+                                <lem/>
+                                <rdg wit="#G" type="addition" resp="#CJS">
+                                    <add>γε</add>
+                                </rdg>
+                            </app>, ὦ ἄνδρες, αἰσχρὸν <app>
+                                <lem>στέγης</lem>
+                                <rdg wit="#L" type="orthographic" resp="#CJS">στέγη</rdg>
+                            </app>
+                            <app>
+                                <lem>γε</lem>
+                                <rdg wit="#A" resp="#MEC #OF #CJS"/>
+                                <rdg wit="#R" resp="#OF #CJS"/>
+                            </app>
+                            <app>
+                                <lem>φθονῆσαι</lem>
+                                <rdg wit="#H2" type="substantial" resp="#CJS">φθονῆναι</rdg>
+                            </app>· <app>
+                                <lem>εἰσίτω</lem>
+                                <rdg wit="#H2" resp="#CJS">εἶσι</rdg>
+                            </app> οὖν</said>. καὶ ἅμα ἀπέβλεψεν εἰς τὸν <persName ref="#Autolycus"
+                            >Αὐτόλυκον</persName>, δῆλον ὅτι <app>
+                            <!--qui abbiamo un bel caso in cui R diverge dal lemma, B omette il lemma, e due studiosi emendano il lemma.
+                            Inoltre, 3 studiosi (Marchant, Ollier, Cirignano) riportano informazioni leggermente diverse in apparato,
+                            spezzando questa porzione di testo in modo diverso. 
+                            COME HO FATTO: ho scomposto i singoli loci critici in frammenti più piccoli, in modo da poter rappresentare
+                            esaustivamente gli interventi interpretativi dei singoli studiosi-->
+                            <lem>ἐπισκοπῶν τί</lem>
+                            <rdg wit="#R" resp="#CJS">σκοπῶν τί</rdg>
+                            <rdg resp="#Richards #Naber">ἐπισκοπῶν ποῖόν τι</rdg>
+                            <rdg wit="#B" resp="#CJS"/>
+                        </app> ἐκείνῳ δόξειε τὸ σκῶμμα εἶναι.</p>
+                </div>
+
+                <div type="paragraph" n="13" xml:id="c1p13">
+                    <p><persName ref="#Philip">ὁ δὲ</persName> στὰς ἐπὶ τῷ ἀνδρῶνι <app>
+                            <lem>ἔνθα τὸ δεῖπνον ἦν</lem>
+                            <rdg resp="#Mehler" type="deletion"/>
+                        </app> εἶπεν· <said who="#Philip" direct="true">Ὅτι μὲν γελωτοποιός εἰμι
+                            ἴστε πάντες· ἥκω δὲ προθύμως νομίσας γελοιότερον εἶναι τὸ ἄκλητον ἢ <app>
+                                <lem>τὸ </lem>
+                                <rdg wit="#R" resp="#CJS">τὸν</rdg>
+                            </app>κεκλημένον ἐλθεῖν ἐπὶ τὸ δεῖπνον</said>. <said who="#Callias"
+                            direct="true">Κατακλίνου τοίνυν,</said> ἔφη ὁ <persName ref="#Callias"
+                            >Καλλίας</persName>. <said who="#Callias" direct="true">καὶ γὰρ οἱ
+                            παρόντες σπουδῆς μέν, ὡς ὁρᾷς, μεστοί, γέλωτος δὲ ἴσως
+                            ἐνδεέστεροι</said>.</p>
+                </div>
+
+                <div type="paragraph" n="14" xml:id="c1p14">
+                    <p> δειπνούντων δὲ αὐτῶν ὁ <persName ref="#Philip">Φίλιππος</persName>
+                        <app>
+                            <lem>γελοῖόν τι εὐθὺς</lem>
+                            <rdg wit="#G" type="transposition" resp="#CJS">εὐθὺς γελοῖόν τι</rdg>
+                        </app>
+                        <app>
+                            <lem>ἐπεχείρει</lem>
+                            <rdg wit="#R" resp="#OF">ἐπιχείρει</rdg>
+                        </app> λέγειν, ἵνα δὴ <app>
+                            <lem>ἐπιτελοίη</lem>
+                            <rdg wit="#R" type="orthographic" resp="#OF #CJS">ἐπιμελοίη</rdg>
+                        </app>
+                        <app>
+                            <lem>ὧνπερ</lem>
+                            <rdg wit="#H2" resp="#CJS">ὧν πάρ'</rdg>
+                        </app>ὧνπερ ἕνεκα ἐκαλεῖτο ἑκάστοτε ἐπὶ τὰ δεῖπνα. ὡς δ’ οὐκ ἐκίνησε γέλωτα,
+                        τότε μὲν ἀχθεσθεὶς φανερὸς ἐγένετο. αὖθις δ’ ὀλίγον ὕστερον ἄλλο τι γελοῖον
+                        ἐβούλετο λέγειν. ὡς δὲ οὐδὲ τότε ἐγέλασαν ἐπ’ αὐτῷ, ἐν τῷ μεταξὺ παυσάμενος
+                        τοῦ δείπνου <app>
+                            <lem>συγκαλυψάμενος</lem>
+                            <rdg resp="#Mehler" type="substantial">ἐγκαλυψάμενος</rdg>
+                        </app> κατέκειτο.</p>
+                </div>
+
+
+                <!--___________________________________________________________________________________________________________________________________________________-->
+                <div type="paragraph" n="15" xml:id="c1p15">
+                    <p>καὶ ὁ <persName ref="#Callias">Καλλίας</persName>, <said who="#Callias"
+                            direct="true">Τί τοῦτ’</said>, ἔφη, <said who="#Callias" direct="true">ὦ
+                                <persName ref="#Philip">Φίλιππε</persName>; ἀλλ’ ἢ ὀδύνη σε
+                            εἴληφε;</said> καὶ <persName ref="#Philip">ὃς</persName> ἀναστενάξας
+                        εἶπε· <said who="#Philip" direct="true">Ναὶ μὰ Δί’,</said> ἔφη, <said
+                            who="#Philip" direct="true">ὦ <persName ref="#Callias"
+                            >Καλλία</persName>, μεγάλη γε· ἐπεὶ γὰρ γέλως ἐξ ἀνθρώπων <app>
+                                <lem>ἀπόλωλεν</lem>
+                                <rdg wit="#G" resp="#CJS">ὄλωλεν</rdg>
+                            </app>, ἔρρει τὰ ἐμὰ <app>
+                                <lem>πράγματα</lem>
+                                <rdg resp="#Mehler" type="deletion"/>
+                            </app>. πρόσθεν μὲν γὰρ τούτου ἕνεκα <app>
+                                <lem>ἐκαλούμην</lem>
+                                <rdg wit="#H2" resp="#CJS">ἐκαλού</rdg>
+                            </app> ἐπὶ <app>
+                                <lem>τὰ</lem>
+                                <rdg wit="#H2" resp="#CJS">τὸν</rdg>
+                            </app> δεῖπνα, ἵνα <app>
+                                <lem>εὐφραίνοιντο</lem>
+                                <rdg wit="#V #O #L #N" type="substantial" resp="#CJS"
+                                    >εὐφραίνοντο</rdg>
+                            </app> οἱ συνόντες <!--Here we find a case of transposition, but since this is a simple case, it's not necessary to use specific
+                                    strategies. It is enough to simply use <rdg wit="#..." @type="transposition">-->
+                            <app>
+                                <lem>δι’ ἐμὲ γελῶντες</lem>
+                                <rdg wit="#Z #Q" type="transposition" resp="#CJS">γελῶντες δι’
+                                    ἐμὲ</rdg>
+                                <rdg wit="#H2" type="substantial" resp="#CJS">δὲ ἐμὲ γελῶντες</rdg>
+                            </app>· νῦν δὲ τίνος ἕνεκα <app>
+                                <lem>καὶ</lem>
+                                <rdg wit="#H2" resp="#MEC #OF" type="omission"/>
+                            </app>
+                            <app>
+                                <lem>καλεῖ</lem>
+                                <rdg wit="#A" rend="superscript" resp="#CJS">καλοῖ</rdg>
+                                <witDetail wit="#A">Manuscript A reports this reading supra
+                                    versum</witDetail>
+                            </app> μέ τις; <!--da ουτε γαρ fino a μέ τις viene ripetuto nei codd EAH1, mentre il passo è omesso da F ante correctionem
+                                    
+                                CREDO DI AVER TROVATO UN MODO CORRETTO (O PER LO MENO WELL FORMED) DI MARCARE DELLE LACUNE.
+                                occorre annidare gli elementi vuoti <lacunaStart/> e <lacunaEnd/> all'interno del <lem>, cioè il testo che scegliamo di restituire, 
+                                al cui interno cmq si possono annidare altri <app>. Or would it be better to mark it as an <rdg wit="#F" type="omission"/>, followed
+                                by a <witDetail> explication in plain text? 
+                            
+                            NB: questo metodo è tuttavia valido solo in quei casi in cui la lacuna si esaurisce entro i limiti della
+                            <div> di un solo paragrafo; altrimenti Oxygen segnala errore rosso [20/05/2024]-->
+                            <app>
+                                <lem>
+                                    <lacunaStart wit="#F"/> οὔτε γὰρ ἔγωγε <app>
+                                        <lem>σπουδάσαι</lem>
+                                        <rdg wit="#H2" resp="#CJS">σπουδήσαι</rdg>
+                                    </app> ἂν δυναίμην μᾶλλον <app>
+                                        <lem>ἤπερ</lem>
+                                        <rdg resp="#Richards" type="substitution">ἢ</rdg>
+                                    </app> ἀθάνατος γενέσθαι, <app>
+                                        <!--qui troviamo un esempio di marcatura degli interventi dello scriba nel manoscritto, 
+                                            tipo "in margine" "supra versum" "ante correctionem", da riportare nel <rdg> tramite l'@rend (questo è il metodo qui adottato); 
+                                        un altro modo di riportare informazioni simili è tramite l'@ana; 
+                                        un altro ancora invece è l'@place="margin"/"supra versum". 
+                                        
+                                        NB: TEI Guidelines, modulo 12, Critical Apparatus, dice che per notare che in un manoscritto una lezione è a margine,
+                                        bisogna far ricorso all'elemento <witDetail> (che è un tipo speciale di note) in cui spiegare in plain text che tale
+                                        lezione nel tal manoscritto sta a margine. Penso così anche per supra versum, ante correctionem, ecc...
+                                        
+                                        Scelgo di usare sia l'@rend="..." con il valore proprio di ciascun caso ("superscript" in caso di supra versum, 
+                                        "ante-correctionem", "margin" ecc.) che la descrizione in plain text entro l'elemento witDetail
+                                        
+                                        Valutare insieme qual è il modo migliore-->
+                                        <lem wit="#A" rend="margin" resp="#MEC #OF #CJS">οὔτε
+                                            μὴν</lem>
+                                        <witDetail wit="#A">Manuscript A reports this reading in
+                                            margin</witDetail>
+                                        <rdg wit="#Q #R" type="substantial" resp="#OF #CJS">οὔτε
+                                            μὴ</rdg>
+                                        <rdg wit="#Z #N" type="substantial" resp="#CJS">οὔτε
+                                            μὴ</rdg>
+                                        <rdg wit="cet." type="substantial" resp="#OF #CJS">τοῦ τε
+                                            μὴ</rdg>
+                                    </app> ὡς ἀντικληθησόμενος καλεῖ μέ τις <lacunaEnd wit="#F"/>
+                                </lem>
+                                <rdg wit="#F" resp="#CJS"/>
+                                <witDetail wit="#F" rend="ante-correctionem">From οὔτε γὰρ to μέ τις
+                                    is omitted in manuscript F, ante correctionem.</witDetail>
+                                <rdg wit="#E #A #H1" type="repetition" resp="#CJS">
+                                    <add>οὔτε γὰρ ἔγωγε σπουδάσαι ἂν δυναίμην μᾶλλον ἤπερ ἀθάνατος
+                                        γενέσθαι, οὔτε μὴν ὡς ἀντικληθησόμενος καλεῖ μέ τις</add>
+                                </rdg>
+                                <witDetail wit="#E #A #H1">From οὔτε γὰρ to μέ τις is repeated in
+                                    manuscripts EAH1.</witDetail>
+                            </app> , ἐπεὶ πάντες ἴσασιν ὅτι ἀρχὴν οὐδὲ νομίζεται εἰς τὴν ἐμὴν οἰκίαν
+                            δεῖπνον <app>
+                                <lem>προσφέρεσθαι</lem>
+                                <rdg resp="#Stephanus">εἰσφέρεσθαι</rdg>
+                                <!--NB: here comes one of the many cases where @resp is an encient EDITOR, as reported in modern editions' apparata; 
+                                Should I report only the ancient one as @resp, or should I indicate, beside him, also the modern ones?
+                                (in this way: resp="#Stephanus #MEC #OF")-->
+                            </app>.</said> καὶ ἅμα λέγων ταῦτα ἀπεμύττετό <app>
+                            <lem>τε</lem>
+                            <rdg wit="#F" resp="#MEC #OF #CJS" type="omission"/>
+                        </app> καὶ τῇ φωνῇ <app>
+                            <lem>σαφῶς</lem>
+                            <rdg wit="#B" resp="#CJS"/>
+                        </app> κλαίειν ἐφαίνετο.</p>
+                </div>
+
+
+                <div type="paragraph" n="16" xml:id="c1p16">
+                    <p>πάντες μὲν οὖν παρεμυθοῦντό τε αὐτὸν <said who="#Callias, #Hipponicus, 
+                        #Autolycus, #Niceratus, #Socrates, #Critobulus, #Hermogenes, #Antisthenes, 
+                        #Charmides, #Lycon, #Philip" direct="false">
+                            <app>
+                                <lem>ὡς</lem>
+                                <rdg wit="#X #B" resp="#CJS">καὶ</rdg>
+                            </app> αὖθις <app>
+                                <lem>γελασόμενοι</lem>
+                                <rdg wit="#A" type="substantial" rend="ante-correctionem"
+                                    resp="#CJS">γελασόμενος</rdg>
+                                <witDetail wit="#A">Manuscript A reports this reading ante
+                                    correctionem</witDetail>
+                            </app> καὶ δειπνεῖν ἐκέλευον</said>, <persName ref="#Critobulus"
+                            >Κριτόβουλος</persName> δὲ καὶ ἐξεκάγχασεν ἐπὶ τῷ οἰκτισμῷ αὐτοῦ. <app>
+                            <lem>ὁ δ’ ὡς</lem>
+                            <rdg wit="#X #B" resp="#CJS">ὣς δ’ ὡς</rdg>
+                        </app> ᾔσθετο τοῦ γέλωτος, ἀνεκαλύψατό τε καὶ τῇ ψυχῇ παρακελευσάμενος
+                        θαρρεῖν, ὅτι ἔσονται συμβολαί, πάλιν ἐδείπνει.</p>
+                </div>
+            </div>
+            <!--quanto alla marcatura dei loci critici fino a qui, mi sono basato sul cap. 5 della dissertazione di Cirignano, 
+               "Collation of Manuscripts". Bisogna riguardare tutti gli <app> per rivederli alla luce del testo critico 
+               di Marchant, Ollier, e Cirignano stesso, dal momento che penso la sezione della collazione dei manoscritti possa 
+               differire dalle scelte a testo che ha effettuato.-->
+
+
+
+
+
+            <!--NB. Dal momento che già il primo libro, marcato per intero, offre un piuttosto variegato ed esaustivo campionario di interventi filologici, penso possa bastare come specimen, 
+            a meno che non si voglia dare un esempio su come rappresentare un passo talmente critico da lasciare gli studiosi senza elementi per poter neppure avanzare congetture, 
+            inserendo il passo cioè tra cruces desperationis-->
+            <div n="2" type="specimen" xml:id="specChap_2_p1">
+                <head>Book 2</head>
+                <div type="paragraph" n="1" xml:id="c2p1">
+                    <p>Ὡς δ’ ἀφῃρέθησαν αἱ τράπεζαι καὶ ἔσπεισάν τε καὶ ἐπαιάνισαν, ἔρχεται αὐτοῖς
+                        ἐπὶ κῶμον Συρακόσιός τις ἄνθρωπος, ἔχων τε αὐλητρίδα ἀγαθὴν καὶ ὀρχηστρίδα
+                        τῶν τὰ θαύματα δυναμένων ποιεῖν, καὶ παῖδα πάνυ γε ὡραῖονκαὶ πάνυ καλῶς
+                        κιθαρίζοντα καὶ ὀρχούμενον. ταῦτα δὲ καὶ ἐπιδεικνὺς ὡς ἐν θαύματι ἀργύριον
+                        ἐλάμβανεν.</p>
+                </div>
+            </div>
+
+            <div n="3" type="specimen" xml:id="specChap_4_p37">
+                <head>Book 4</head>
+                <div type="paragraph" n="37" xml:id="c4p37">
+                    <!--Here I will take into consideration the article by G.L. Cooper, "A better solution for the text of 
+                        Xenophon, Symp. 4.37", Classical Quarterly, XXI (1971) 62-64. 
+                        This is to show another example of philological conjecture made by a modern scholar-->
+                    <p>τούτους μὲν οὖν ἔγωγε καὶ πάνυ οἰκτίρω τῆς ἄγαν χαλεπῆς νόσου. ὅμοια γάρ μοι
+                        δοκοῦσι πάσχειν ὥσπερ εἴ τις πολλὰ ἔχοι καὶ πολλὰ ἐσθίων μηδέποτε
+                        ἐμπίμπλαιτο. ἐγὼ δὲ οὕτω μὲν πολλὰ ἔχω ὡς μόλις αὐτὰ καὶ [ἐγὼ ἂν] αὐτὸς
+                        εὑρίσκω· ὅμως δὲ περίεστί μοι καὶ ἐσθίοντι ἄχρι τοῦ μὴ πεινῆν ἀφικέσθαι καὶ
+                        πίνοντι μέχρι τοῦ μὴ διψῆν καὶ ἀμφιέννυσθαι ὥστε ἔξω μὲν μηδὲν μᾶλλον
+                        Καλλίου τούτου τοῦ πλουσιωτάτου ῥιγοῦν·</p>
+                </div>
+
+            </div>
+
+            <div n="4" type="specimen" xml:id="specChap_6_p9">
+                <head>Book 6</head>
+                <div type="paragraph" n="9" xml:id="c6p9">
+                    <p>Ναὶ μὰ τὸν Δί’, ἔφη, καὶ ἄλλοις γε πολλοῖς. Ἀλλ’ ὅμως, ἔφη ὁ Σωκράτης, σὺ
+                        αὐτὸν μὴ εἴκαζε, ἵνα μὴ καὶ σὺ λοιδορουμένῳ ἐοίκῃς. Ἀλλ’ εἴπερ γε τοῖς πᾶσι
+                        καλοῖς καὶ τοῖς βελτίστοις εἰκάζω αὐτόν, ἐπαινοῦντι μᾶλλον ἢ λοιδορουμένῳ
+                        δικαίως ἂν εἰκάζοι μέ τις. Καὶ νῦν σύγε λοιδορουμένῳ ἔοικας, εἰ †πάντ’ αὐτοῦ
+                        βελτίων† φῂς εἶναι.</p>
+                </div>
+            </div>
+
+            <div n="5" type="specimen" xml:id="specChap_8_p1">
+                <head>Book 8</head>
+                <div type="paragraph" n="1" xml:id="c8p1">
+                    <p>Ὁ μὲν δὴ Συρακόσιος ἐξελθὼν συνεκροτεῖτο· ὁ δὲ Σωκράτης πάλιν αὖ καινοῦ λόγου
+                        κατῆρχεν. Ἆρ’, ἔφη, ὦ ἄνδρες, εἰκὸς ἡμᾶς παρόντος δαίμονος μεγάλου καὶ τῷ
+                        μὲν χρόνῳ ἰσήλικος τοῖς ἀειγενέσι θεοῖς, τῇ δὲ μορφῇ νεωτάτου, καὶ μεγέθει
+                        πάντα ἐπέχοντος, ψυχῇ δὲ ἀνθρώπου ἱδρυμένου, Ἔρωτος, μὴ [ἂν] ἀμνημονῆσαι,
+                        ἄλλως τε καὶ ἐπειδὴ πάντες ἐσμὲν τοῦ θεοῦ τούτου θιασῶται;</p>
+                </div>
+            </div>
+
+            <div n="6" type="specimen" xml:id="specChap_9_p6_p7">
+                <head>Book 9</head>
+                <div type="paragraph" n="6" xml:id="c9p6">
+                    <p>καὶ γὰρ ἤκουον τοῦ Διονύσου μὲν ἐπερωτῶντος αὐτὴν εἰ φιλεῖ αὐτόν, τῆς δὲ
+                        οὕτως ἐπομνυούσης
+                        <!--What follows is the xml representation of angular brackets, which need to be 
+                        disambiguated through the code &#60 and &#62, because the symbol itself is used to open and close tags and must be substituted-->
+                        &#60;ὥστε&#62; μὴ μόνον τὸν Διόνυσον ἀλλὰ καὶ τοὺς παρόντας ἅπαντας
+                        συνομόσαι ἂν ἦ μὴν τὸν παῖδα καὶ τὴν παῖδα ὑπ’ ἀλλήλων φιλεῖσθαι. ἐῴκεσαν
+                        γὰρ οὐ δεδιδαγμένοις τὰ σχήματα ἀλλ’ ἐφειμένοις πράττειν ἃ πάλαι
+                        ἐπεθύμουν.</p>
+                </div>
+                <div type="paragraph" n="7" xml:id="c9p7">
+                    <p>τέλος δὲ οἱ συμπόται ἰδόντες περιβεβληκότας τε ἀλλήλους καὶ ὡς εἰς εὐνὴν
+                        ἀπιόντας, οἱ μὲν ἄγαμοι γαμεῖν ἐπώμνυσαν, οἱ δὲ γεγαμηκότες ἀναβάντες ἐπὶ
+                        τοὺς ἵππους ἀπήλαυνον πρὸς τὰς ἑαυτῶν γυναῖκας, ὅπως τούτων τύχοιεν.
+                        Σωκράτης δὲ καὶ τῶν ἄλλων οἱ ὑπομείναντες πρὸς Λύκωνα καὶ τὸν υἱὸν σὺν
+                        Καλλίᾳ περιπατήσοντες ἀπῆλθον.</p>
+                    <trailer>αὕτη τοῦ τότε συμποσίου κατάλυσις ἐγένετο.</trailer>
+                    <!--a trailer element represents the closing or explicit of a work-->
+                </div>
+            </div>
+        </body>
+
+    </text>
+</TEI>
