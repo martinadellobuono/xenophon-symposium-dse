@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // aggiunto
 
 module.exports = {
    devtool: 'source-map',
@@ -27,12 +28,19 @@ module.exports = {
          jQuery: 'jquery',
          'window.jQuery': 'jquery',
          'window.$': 'jquery'
+      }),
+      new MiniCssExtractPlugin({ // aggiunto
+         filename: '[name].css',
+         chunkFilename: '[id].css',
       })
    ],
    module: {
       rules: [
          { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-         { test: /\.(s*)css$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+         {
+           test: /\.(s*)css$/,
+           use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] // modificato
+         },
          { test: /\.html$/, loader: 'html-loader' },
          // inline base64 URLs for <=8k images, direct URLs for the rest
          { test: /\.(png|jpg|ico)$/, loader: 'url-loader?limit=8192' },
